@@ -38,8 +38,8 @@ while True:
     cv.imshow("Camera", frame)
 
     # Wait for press "ESCAPE" to exit
-    k = cv.waitKey(delay=10)
-    if k == 27:
+    key = cv.waitKey(delay=10)
+    if key == 27:
         break
 
     # Convert color space from BGR to RGB format
