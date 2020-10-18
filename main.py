@@ -9,7 +9,7 @@ import json
 
 # Create dictionary with image class names from json file
 Classes = {}
-with open("./ImageNet1000.txt", "r") as jsonFile:
+with open("./ImageNet1000.json", "r") as jsonFile:
     Classes = json.loads(jsonFile.read())
 
 # Create pretrained neural network "Resnet18"
