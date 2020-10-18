@@ -42,7 +42,7 @@ while True:
     if k == 27:
         break
 
-    # Conver color space from BGR to RGB format
+    # Convert color space from BGR to RGB format
     frame = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
 
     # Create the PIL(Python image library) image from the frame
@@ -54,7 +54,7 @@ while True:
     image = tf.to_tensor(image)
     image = tf.normalize(image, [0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 
-    # Regognize image
+    # Recognize image
     outputs = Net(image.view(1, 3, 224, 224))
     _, preds = torch.max(outputs, 1)
     className = Classes[str(preds.item())]
