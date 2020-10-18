@@ -23,8 +23,9 @@ if not camera.isOpened():
     print("Could not open the camera")
     sys.exit(-1)
 
-# Main loop. Read the frame from the camera, show the captured frame in the window,
-# recognize the image by resnet18
+# Main loop. Read the frame from the camera,
+# show the captured frame in the window,
+# recognize the image by Resnet18
 while True:
 
     # Read the frame from the camera
